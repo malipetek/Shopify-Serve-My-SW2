@@ -1,0 +1,60 @@
+{
+  "name": "my-node-app",
+  "version": "1.0.0",
+  "main": "web/backend/index.js",
+  "license": "UNLICENSED",
+  "repository": "https://github.com/Michael-Gibbons/OSB",
+  "type": "module",
+  "scripts": {
+    "shopify": "shopify",
+    "build": "shopify app build",
+    "dev": "concurrently --kill-others \"shopify app dev\" \"npm run log\" --raw",
+    "log": "node log.js",
+    "info": "shopify app info",
+    "generate": "shopify app generate",
+    "deploy": "shopify app deploy",
+    "start": "npm run build && node web/backend/index.js"
+  },
+  "dependencies": {
+    "@shopify/app": "^3.23.0",
+    "@shopify/cli": "^3.23.0"
+  },
+  "devDependencies": {
+    "@michael.gibbons/doc-me": "^1.1.0",
+    "concurrently": "^7.6.0"
+  },
+  "doc": [
+    {
+      "name": "prisma",
+      "value": "https://www.prisma.io/docs/guides"
+    },
+    {
+      "name": "bullmq",
+      "value": "https://docs.bullmq.io/guide/introduction"
+    },
+    {
+      "name": "polaris",
+      "value": "https://polaris.shopify.com/components"
+    },
+    {
+      "name": "shopify REST api",
+      "value": "https://shopify.dev/api/admin-rest"
+    },
+    {
+      "name": "shopify webhook topics",
+      "value": "https://shopify.dev/api/admin-rest/2022-01/resources/webhook#resource-object"
+    },
+    {
+      "name": "shopify access scopes",
+      "value": "https://shopify.dev/api/usage/access-scopes"
+    },
+    {
+      "name": "OSB",
+      "value": "https://github.com/Michael-Gibbons/OSB"
+    },
+    {
+      "name": "react query",
+      "value": "https://react-query-v3.tanstack.com/overview"
+    }
+  ]
+}
